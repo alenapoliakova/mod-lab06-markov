@@ -87,7 +87,7 @@ TEST(test5, generate_from_table) {
         }
         std::cout << std::endl;
     }
-    std::string result = tg.get_result(25);
+    std::string result = tg.get_result(20);
     int i = -1, index = 0;
     while (result.find(' ', index) != -1) {
         index = result.find(' ', index + 1);
