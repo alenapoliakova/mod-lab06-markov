@@ -74,6 +74,19 @@ TEST(test5, generate_from_table) {
     }
     tg.find_suffix();
     tg.get_connected();
+    // Вывод размера statetab и содержимого two_elem
+    std::cout << "Size of statetab: " << tg.statetab.size() << std::endl;
+    for (const auto& entry : tg.statetab) {
+        std::cout << "Key: ";
+        for (const auto& elem : entry.first) {
+            std::cout << elem << " ";
+        }
+        std::cout << " Value: ";
+        for (const auto& val : entry.second) {
+            std::cout << val << " ";
+        }
+        std::cout << std::endl;
+    }
     std::string result = tg.get_result(25);
     int i = -1, index = 0;
     while (result.find(' ', index) != -1) {
