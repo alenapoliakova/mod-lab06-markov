@@ -56,7 +56,8 @@ std::string TextGenerator::get_result(int size) {
             two_elem.erase(two_elem.begin());
             two_elem.push_back(text[i]);
         } catch (const std::out_of_range& e) {
-            std::cerr << "Ошибка: ключ '" << two_elem[0] << "' или '" << two_elem[1] << "' не найден в statetab." << std::endl;
+            std::cerr << "Ошибка: ключ '" << two_elem[0] << "' или '" << std::endl;
+            std::cerr << two_elem[1] << "' не найден в statetab." << std::endl;
         }
     }
     return output;
